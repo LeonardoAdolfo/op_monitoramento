@@ -8,10 +8,10 @@ from mysql.connector import errorcode
 #Conection with database
 try:
     db = mysql.connector.connect(
-        host = "127.0.0.1",
-        user =  "op_admin",
-        password = "2233@Mysql**",
-        database = "memory"
+        host = "HOST",
+        user =  "USER",
+        password = "PASSWORD",
+        database = "DATABASE"
     ) 
 except mysql.connector.Error as err:
   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
