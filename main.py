@@ -36,18 +36,18 @@ memoria_hd = round(psutil.disk_usage('/').total / (1024 * 1024 * 1024), 1)
 memoria_hd_porcento = psutil.disk_usage('/').percent
 
 def mysql_insert():
-  sql = "INSERT INTO tb_memoria (pc_nome, login, memoria_ram, memoria_hd, memoria_hd_porcento, cpu) VALUES (%s, %s, %s, %s, %s,%s)"
+  sql = "INSERT INTO YOUR_TABLE (pc_nome, login, memoria_ram, memoria_hd, memoria_hd_porcento, cpu) VALUES (%s, %s, %s, %s, %s,%s)"
   valores = (pc_nome, login, memoria_ram, memoria_hd, memoria_hd_porcento, cpu())
   cursor.execute(sql, valores)
   db.commit()
 
 def mysql_update():
-  update_query = "UPDATE tb_memoria SET memoria_hd_porcento = %s WHERE login = %s"
+  update_query = "UPDATE YOUR_TABLE SET memoria_hd_porcento = %s WHERE login = %s"
   cursor.execute(update_query, (memoria_hd_porcento, login))
   db.commit()
     
 def check():
-  check_query = "SELECT COUNT(*) FROM tb_memoria WHERE login = %s"
+  check_query = "SELECT COUNT(*) FROM YOUR_TABLE WHERE login = %s"
   cursor.execute(check_query, (login,))
   exists = cursor.fetchone()[0]
   return exists
