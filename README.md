@@ -16,8 +16,8 @@ Before running the script, ensure you have the following prerequisites installed
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/memory-monitoring-script.git
-   cd memory-monitoring-script
+   git clone https://github.com/LeonardoAdolfo/op_monitoramento.git
+   cd op_monitoramento
    ```
 
 2. Configure the MySQL database connection in the code:
